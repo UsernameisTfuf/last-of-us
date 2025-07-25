@@ -1,0 +1,277 @@
+{
+  "users": {
+    "1313579118654394503": {
+      "baibo": {
+        "license_key": "nigger",
+        "hwid": "97317BAC38A0DD65",
+        "whitelisted": true,
+        "created_at": "2025-07-16T15:44:02.554Z",
+        "last_reset": "2025-07-16T15:44:36.361Z",
+        "access_count": 1
+      },
+      "nigga": {
+        "license_key": "17F4-9EC4-571C-0289",
+        "hwid": "D5C0082CEC413D2E",
+        "whitelisted": true,
+        "created_at": "2025-07-16T15:50:27.184Z",
+        "last_reset": null,
+        "access_count": 1
+      },
+      "neger": {
+        "license_key": "sddwew",
+        "hwid": "07BA83C47355F610",
+        "whitelisted": true,
+        "created_at": "2025-07-16T16:04:17.764Z",
+        "last_reset": "2025-07-16T16:05:46.199Z",
+        "access_count": 1
+      },
+      "sds": {
+        "license_key": "0EF1-6F58-87A2-A3BF",
+        "hwid": "3F6AFCF7F4C2DC83",
+        "whitelisted": true,
+        "created_at": "2025-07-16T16:15:59.250Z",
+        "last_reset": null,
+        "access_count": 1
+      }
+    },
+    "1238944861122723872": {
+      "baibo": {
+        "license_key": "8B85-937B-4BDF-BBD3",
+        "hwid": "E1477A56D06ACC7C",
+        "whitelisted": true,
+        "created_at": "2025-07-16T15:44:49.661Z",
+        "last_reset": null,
+        "access_count": 0
+      }
+    }
+  },
+  "scripts": {
+    "sds": {
+      "display_name": "sds",
+      "created_by": "1313579118654394503",
+      "created_at": "2025-07-16T14:32:42.391Z",
+      "protected": true,
+      "script_key": "lRXZLLi9W6E2dkvUFTezEA",
+      "user_count": 0
+    },
+    "lordhavemercy": {
+      "display_name": "lordhavemercy",
+      "created_by": "1313579118654394503",
+      "created_at": "2025-07-16T14:42:57.441Z",
+      "protected": true,
+      "script_key": "i8NigwOS4kVd2R5tA2YpA",
+      "user_count": 0
+    },
+    "nigga": {
+      "display_name": "nigga",
+      "created_by": "1313579118654394503",
+      "created_at": "2025-07-16T14:57:54.400Z",
+      "protected": true,
+      "script_key": "pjuq2orakcsot6x1lwmd5c",
+      "user_count": 0
+    },
+    "ooo": {
+      "display_name": "ooo",
+      "created_by": "1313579118654394503",
+      "created_at": "2025-07-16T15:01:05.285Z",
+      "protected": true,
+      "script_key": "eu8escjt1utqkqx5p6ywwc",
+      "user_count": 0
+    },
+    "heyman": {
+      "display_name": "heyman",
+      "created_by": "1313579118654394503",
+      "created_at": "2025-07-16T15:05:31.881Z",
+      "protected": true,
+      "script_key": "posl0myzwqxgw34zguht",
+      "user_count": 0
+    },
+    "baibo": {
+      "display_name": "baibo",
+      "created_by": "1313579118654394503",
+      "created_at": "2025-07-16T15:09:00.905Z",
+      "protected": true,
+      "script_key": "9zjtwb3edtxos5eyknxy",
+      "user_count": 0
+    },
+    "neger": {
+      "display_name": "neger",
+      "created_by": "1313579118654394503",
+      "created_at": "2025-07-16T15:10:37.784Z",
+      "protected": true,
+      "script_key": "klq6d8tp1ufs58iix9lylp",
+      "user_count": 39
+    },
+    "sss": {
+      "display_name": "sss",
+      "created_by": "1313579118654394503",
+      "created_at": "2025-07-16T15:15:54.313Z",
+      "protected": true,
+      "script_key": "6ixgw7fysn9hf7aitrd72v",
+      "user_count": 21
+    }
+  },
+  "protected_scripts": {
+    "sds": {
+      "display_name": "sds",
+      "original_content": "print(\"hello world\")",
+      "protected_content": "-- Protected by ScriptGuard Pro\n-- Script Key: lRXZLLi9W6E2dkvUFTezEA\n-- DO NOT SHARE THIS FILE\n\nlocal scriptKey = \"lRXZLLi9W6E2dkvUFTezEA\"\nlocal protectedContent = [==[\nprint(\"hello world\")\n]==]\n\n-- Anti-tampering check\nif not scriptKey or scriptKey == \"\" then\n    error(\"Invalid script key\")\nend\n\n-- Load protected content\nlocal success, result = pcall(function()\n    return loadstring(protectedContent)()\nend)\n\nif not success then\n    error(\"Failed to load protected script: \" .. tostring(result))\nend",
+      "script_key": "lRXZLLi9W6E2dkvUFTezEA",
+      "file_size": 20
+    },
+    "lordhavemercy": {
+      "display_name": "lordhavemercy",
+      "original_content": "print(\"hello world\")",
+      "protected_content": "-- Protected by ScriptGuard Pro\n-- Script Key: i8NigwOS4kVd2R5tA2YpA\n-- DO NOT SHARE THIS FILE\n\nlocal scriptKey = \"i8NigwOS4kVd2R5tA2YpA\"\nlocal protectedContent = [==[\nprint(\"hello world\")\n]==]\n\n-- Anti-tampering check\nif not scriptKey or scriptKey == \"\" then\n    error(\"Invalid script key\")\nend\n\n-- Load protected content\nlocal success, result = pcall(function()\n    return loadstring(protectedContent)()\nend)\n\nif not success then\n    error(\"Failed to load protected script: \" .. tostring(result))\nend",
+      "script_key": "i8NigwOS4kVd2R5tA2YpA",
+      "file_size": 20
+    },
+    "nigga": {
+      "display_name": "nigga",
+      "original_content": "print(\"hello world\")",
+      "protected_content": "-- Protected by ScriptGuard Pro\n-- Script Key: pjuq2orakcsot6x1lwmd5c\nlocal scriptKey = \"pjuq2orakcsot6x1lwmd5c\"\nlocal protectedContent = [==[\nprint(\"hello world\")\n]==]\nif not scriptKey or scriptKey == \"\" then\n    error(\"Invalid script key\")\nend\nlocal success, result = pcall(function()\n    return loadstring(protectedContent)()\nend)\nif not success then\n    error(\"Failed to load protected script: \" .. tostring(result))\nend",
+      "script_key": "pjuq2orakcsot6x1lwmd5c",
+      "file_size": 20
+    },
+    "ooo": {
+      "display_name": "ooo",
+      "original_content": "print(\"hello world\")",
+      "protected_content": "-- Protected by ScriptGuard Pro\n-- Script Key: eu8escjt1utqkqx5p6ywwc\nlocal scriptKey = \"eu8escjt1utqkqx5p6ywwc\"\nlocal protectedContent = [==[\nprint(\"hello world\")\n]==]\nif not scriptKey or scriptKey == \"\" then\n    error(\"Invalid script key\")\nend\nlocal success, result = pcall(function()\n    return loadstring(protectedContent)()\nend)\nif not success then\n    error(\"Failed to load protected script: \" .. tostring(result))\nend",
+      "script_key": "eu8escjt1utqkqx5p6ywwc",
+      "file_size": 20
+    },
+    "heyman": {
+      "display_name": "heyman",
+      "original_content": "print(\"hello world\")",
+      "protected_content": "-- Protected by ScriptGuard Pro\n-- Script Key: posl0myzwqxgw34zguht\nlocal scriptKey = \"posl0myzwqxgw34zguht\"\nlocal protectedContent = [==[\nprint(\"hello world\")\n]==]\nif not scriptKey or scriptKey == \"\" then\n    error(\"Invalid script key\")\nend\nlocal success, result = pcall(function()\n    return loadstring(protectedContent)()\nend)\nif not success then\n    error(\"Failed to load protected script: \" .. tostring(result))\nend",
+      "script_key": "posl0myzwqxgw34zguht",
+      "file_size": 20
+    },
+    "baibo": {
+      "display_name": "baibo",
+      "original_content": "print(\"hello world\")",
+      "protected_content": "-- Protected by ScriptGuard Pro\n-- Script Key: 9zjtwb3edtxos5eyknxy\nlocal scriptKey = \"9zjtwb3edtxos5eyknxy\"\nlocal protectedContent = [==[\nprint(\"hello world\")\n]==]\nif not scriptKey or scriptKey == \"\" then\n    error(\"Invalid script key\")\nend\nlocal success, result = pcall(function()\n    return loadstring(protectedContent)()\nend)\nif not success then\n    error(\"Failed to load protected script: \" .. tostring(result))\nend",
+      "script_key": "9zjtwb3edtxos5eyknxy",
+      "file_size": 20
+    },
+    "neger": {
+      "display_name": "neger",
+      "original_content": "print(\"hello world\")",
+      "protected_content": "-- Protected by ScriptGuard Pro\n-- Script Key: klq6d8tp1ufs58iix9lylp\nlocal scriptKey = \"klq6d8tp1ufs58iix9lylp\"\nlocal protectedContent = [==[\nprint(\"hello world\")\n]==]\nif not scriptKey or scriptKey == \"\" then\n    error(\"Invalid script key\")\nend\nlocal success, result = pcall(function()\n    return loadstring(protectedContent)()\nend)\nif not success then\n    error(\"Failed to load protected script: \" .. tostring(result))\nend",
+      "script_key": "klq6d8tp1ufs58iix9lylp",
+      "file_size": 20
+    },
+    "sss": {
+      "display_name": "sss",
+      "original_content": "print(\"nigger is crazy man it acc works LOLOLOLOLOOL NIGGA\")",
+      "protected_content": "-- Protected by ScriptGuard Pro\n-- Script Key: 6ixgw7fysn9hf7aitrd72v\nlocal scriptKey = \"6ixgw7fysn9hf7aitrd72v\"\nlocal protectedContent = [==[\nprint(\"nigger is crazy man it acc works LOLOLOLOLOOL NIGGA\")\n]==]\nif not scriptKey or scriptKey == \"\" then\n    error(\"Invalid script key\")\nend\nlocal success, result = pcall(function()\n    return loadstring(protectedContent)()\nend)\nif not success then\n    error(\"Failed to load protected script: \" .. tostring(result))\nend",
+      "script_key": "6ixgw7fysn9hf7aitrd72v",
+      "file_size": 60
+    }
+  },
+  "license_keys": [
+    "3171-8D61-06DF-8BA5",
+    "BF51-9718-907C-4053",
+    "E047-88C5-FCA0-B83C",
+    "77FF-C767-E357-C43C",
+    "E433-B133-344B-FA75",
+    "E231-60B9-D200-5D65",
+    "D910-718C-312C-CC59",
+    "8ED0-D37D-375E-C06B",
+    "C954-B47F-42ED-A941",
+    "4411-1FE6-DD57-4041",
+    "BE53-1842-DABC-6D13",
+    "382D-96F6-C22E-173A",
+    "0FC8-2EC6-83BB-AB69",
+    "4F53-4086-5AE5-B4B8",
+    "F07E-E89E-8FC3-7262",
+    "1E4A-0DFE-5784-CD13",
+    "5F96-6C63-F632-0818",
+    "244F-B66B-5A7E-95DD",
+    "55CB-D1CA-4955-0360",
+    "B56A-2BBA-F0A1-4607",
+    "90EB-C794-8DDA-6A67",
+    "C4BB-8E52-5CD3-CCBC",
+    "36BB-164A-BE50-A615",
+    "F555-ACD3-E8B3-FA3B",
+    "8624-408F-BAE3-0880",
+    "E556-6741-7ED7-E017",
+    "18E2-B71A-CD2D-5E17",
+    "4CAD-7057-3CEC-4CEC",
+    "B932-DA9B-9117-EA1E",
+    "E413-BCA6-021D-C3F6",
+    "D0CF-AB60-B92C-BCC6",
+    "DC6E-8D60-1405-9D27",
+    "16A1-959F-3B60-A429",
+    "7743-8F76-959E-BF89",
+    "4FDB-0C4B-39E8-BA67",
+    "B30C-72AB-C239-8BC2",
+    "59A9-8979-3BAE-1BD9",
+    "0D2D-7BB3-A7B9-5595",
+    "DC25-EFB9-6DDB-600D",
+    "821E-46D9-AD85-C03F",
+    "E804-F39E-A4C9-2099",
+    "5EC3-C080-9C7F-7C35",
+    "545A-5A47-6CD7-140F",
+    "774B-17B3-5C8B-565D",
+    "DAC3-7D0C-62CF-76F0",
+    "D2F6-C034-9368-2EA8",
+    "FF50-9D71-A0F5-0744",
+    "7E6C-88DE-5178-5D73",
+    "E58E-FA80-6083-F21A",
+    "6F0F-7841-CDE4-F01F",
+    "F7B8-2945-5BAA-26E8",
+    "F863-8D3B-1186-E696",
+    "BE58-E0BE-A6E7-018C",
+    "D2E6-180E-0EC2-90BF",
+    "A4DC-B38F-49B5-0CDC",
+    "D22F-B3E9-6032-7DBE",
+    "4C82-9E9F-8B15-BA81",
+    "A70A-E293-9F40-3F7A",
+    "8F64-24FB-8786-CF10",
+    "9FA7-2034-33FB-BEB0",
+    "9520-951A-E5AD-BB60",
+    "A517-FC6F-6CE8-D71E",
+    "E8B9-71EB-C253-312D",
+    "DB48-AA12-EC94-8BF9",
+    "5A0B-1D23-2D46-CDC7",
+    "86BA-EDBA-9D13-8380",
+    "2E96-EFC4-59C8-D4B3",
+    "938A-52DA-A55C-C537",
+    "C19B-C863-F88A-E4F6",
+    "FF7A-964E-5D3E-90B2",
+    "F2B5-EB46-F89F-5810",
+    "5618-37D3-F52C-30ED",
+    "254E-E9D1-5046-1F3D",
+    "5A01-D9C1-8C5D-2DBF",
+    "666D-7CB2-CDA9-C2A3",
+    "CF78-10CE-4CE1-7900",
+    "D36C-1C72-BDBB-F021",
+    "4BFF-07BB-544F-9B87",
+    "4326-58A5-2207-4599",
+    "8BBD-2054-C44E-9080",
+    "50E2-E1C6-2E47-BB7C",
+    "C4F7-B73B-D283-AC61",
+    "D357-669E-B92F-7689",
+    "5F70-EFBC-9C19-96E3",
+    "7EB2-CD0C-29CA-71C1",
+    "9DC1-4796-9801-9396",
+    "0F62-9836-326F-2ACE",
+    "8143-8C23-7D82-CE6B",
+    "19AD-9E73-9FAE-2BA7",
+    "27E4-47C9-A408-B3E1",
+    "4B19-CAC1-C3CE-0D0D",
+    "5E42-6FED-BE6E-6150",
+    "9DB6-7C0D-22BD-7558",
+    "9836-2BFC-E450-FBB5",
+    "AE8C-3B5F-6177-9E75",
+    "F882-D5F8-F8C7-71D2",
+    "1D68-EF1D-C755-D4BC",
+    "0BBD-A4A1-8B9C-111F",
+    "922C-E2CD-2689-03EF"
+  ],
+  "settings": {
+    "created_at": "2025-07-16T20:30:53.353Z",
+    "version": "2.0.4"
+  }
+}

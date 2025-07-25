@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaseOH Hub - Key System</title>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('case-case-oh.png') center center/cover no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            border: 1px solid #444;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ffffff, #888888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .checkpoint-indicator {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 15px;
+        }
+
+        .checkpoint {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border: 2px solid #555;
+            transition: all 0.3s ease;
+        }
+
+        .checkpoint.active {
+            background: linear-gradient(45deg, #ffffff, #cccccc);
+            color: #000;
+            border-color: #fff;
+        }
+
+        .checkpoint.completed {
+            background: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+        .start-btn {
+            background: #444;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            opacity: 1;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(45deg, #ffffff, #cccccc);
+            color: #000;
+        }
+
+        .key-status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 0.9em;
+            color: #ccc;
+            z-index: 1000;
+        }
+
+        .keys-count {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .warning {
+            color: #ff4444;
+            margin-top: 15px;
+            font-size: 0.9em;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .warning.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="key-status" id="keyStatus">
+        <div class="keys-count" id="keysCount">Keys: 0</div>
+    </div>
+
+    <div class="container">
+        <div class="logo">CaseOH Hub</div>
+        
+        <div class="checkpoint-indicator">
+            <div class="checkpoint active" id="cp1">1</div>
+            <div class="checkpoint" id="cp2">2</div>
+            <div class="checkpoint" id="cp3">3</div>
+        </div>
+
+        <button class="start-btn" id="startBtn" onclick="startVerification()">Start Verification</button>
+        <div class="warning" id="warning">⚠️ Unauthorized access attempt detected!</div>
+    </div>
+
+    <script>
+        let bypassAttempts = 0;
+        let isBlocked = false;
+        const WORK_URL = 'https://work.ink/21K0/4be2bgxu'; // Replace with your first working URL or use process.env.WORK_URL_1
+
+        async function updateKeysStatus() {
+            try {
+                const response = await fetch('/.netlify/functions/key-count', {
+                    headers: {
+                        'X-API-Key': 'heheysports' // Replace with your key
+                    }
+                });
+                const data = await response.json();
+                document.getElementById('keysCount').textContent = `Keys: ${data.available}`;
+            } catch (error) {
+                console.error('Error updating key status:', error);
+                document.getElementById('keysCount').textContent = `Keys: 0`;
+            }
+        }
+
+        function startVerification() {
+            if (isBlocked) {
+                showWarning('Access blocked due to bypass attempts');
+                return;
+            }
+
+            if (bypassAttempts > 0) {
+                showWarning('Unauthorized access attempt detected!');
+                return;
+            }
+
+            window.location.href = WORK_URL;
+        }
+
+        function showWarning(message) {
+            const warning = document.getElementById('warning');
+            warning.textContent = message;
+            warning.classList.add('show');
+            setTimeout(() => warning.classList.remove('show'), 3000);
+        }
+
+        // Anti-bypass measures
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.key === 'U')) {
+                e.preventDefault();
+                bypassAttempts++;
+                if (bypassAttempts >= 5) isBlocked = true;
+                showWarning('Unauthorized access attempt detected!');
+            }
+        });
+
+        document.addEventListener('contextmenu', e => {
+            e.preventDefault();
+            bypassAttempts++;
+            if (bypassAttempts >= 5) isBlocked = true;
+            showWarning('Unauthorized access attempt detected!');
+        });
+
+        setInterval(() => {
+            if (window.outerHeight - window.innerHeight > 160 || window.outerWidth - window.innerWidth > 160) {
+                bypassAttempts += 2;
+                if (bypassAttempts >= 5) isBlocked = true;
+                showWarning('Unauthorized access attempt detected!');
+            }
+        }, 500);
+
+        // Initialize key status display
+        updateKeysStatus();
+    </script>
+</body>
+</html>
