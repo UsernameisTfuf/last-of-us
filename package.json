@@ -1,26 +1,27 @@
 {
-  "name": "altgenerator",
+  "name": "server",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel start:index start:server",
-    "start:index": "node index.js",
-    "start:server": "node functions/server.js",
-    "dev": "npm-run-all --parallel start:index start:server"
+    "start": "npm run all",
+    "all": "concurrently \"node functions/server.js\" \"node index.js\"",
+    "server": "node functions/server.js",
+    "main": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "@discordjs/rest": "^2.5.1",
     "body-parser": "^2.2.0",
+    "concurrently": "^9.2.0",
     "discord": "^0.8.2",
     "discord-api-types": "^0.38.12",
     "discord.js": "^14.20.0",
     "dotenv": "^17.2.1",
     "node-fetch": "^2.7.0"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "devDependencies": {
     "npm-run-all": "^4.1.5"
   }
